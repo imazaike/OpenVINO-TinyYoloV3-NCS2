@@ -122,54 +122,35 @@ $ sudo python3 /opt/intel//deployment_tools/model_optimizer/mo_tf.py \
 --batch 1 \
 --tensorflow_use_custom_operations_config yolo_v3_tiny_changed.json
 ```
+![pb-to-bin](https://user-images.githubusercontent.com/42289678/62821023-a1810d80-bba8-11e9-8550-5509132127e8.png)
 
+Now, you got 3files!<br>
+```
+/home/<username>/OpenVINO-YoloV3/lrmodels/tiny-YoloV3/FP16/frozen_yolov3-tiny-mine.bin
+/home/<username>/OpenVINO-YoloV3/lrmodels/tiny-YoloV3/FP16/frozen_yolov3-tiny-mine.mapping
+/home/<username>/OpenVINO-YoloV3/lrmodels/tiny-YoloV3/FP16/frozen_yolov3-tiny-mine.xml
+```
 
-
-I fixed a little clone of Chuanqi305/MobileNetv2-SSDLite.<br>
-https://github.com/chuanqi305/MobileNetv2-SSDLite.git<br>
-I have not confirmed the behavior of the generated model at all.<br>
-Pull Request is welcomed.<br>
-
-### Environment
-Ubuntu 16.04<br>
-Python 2.7.12<br>
-Python 3.5.2<br>
-
-### Prerequisites
-Tensorflow and Caffe version [SSD](https://github.com/weiliu89/caffe) is properly installed on your computer.
-
-### Procedure
-
-pip command and installation of Tensorflow.
-
+### Work with PC to run tiny-yolov3
+Execute the following command<br>
 ```
 $ cd ~
-$ sudo apt-get install python-pip python-dev python-launchpadlib   # for Python 2.7
-$ sudo apt-get install python3-pip python3-dev python3-launchpadlib # for Python 3.n
-$ wget https://bootstrap.pypa.io/get-pip.py
-$ sudo python3 get-pip.py
-$ sudo python2 get-pip.py
-$ sudo reboot
-$ sudo -H pip install --upgrade tensorflow # Python 2.7; CPU support (no GPU support) Ver 1.8.0 [2018.06.03]
-$ sudo -H pip3 install --upgrade tensorflow # Python 3.n; CPU support (no GPU support) Ver 1.8.0 [2018.06.03]
+$ git clone https://github.com/PINTO0309/OpenVINO-YoloV3.git
 ```
-
-【Reference】Uninstall Tensorflow
+Copy 3files(.bin)(.mapping)(.xml) to /home/<username>/OpenVINO-YoloV3/lrmodels/tiny-YoloV3/FP16/<br>
+And, Edit the file(/OpenVINO-YoloV3/openvino_tiny-yolov3_MultiStick_test.py)<br>
 
 ```
-$ sudo pip uninstall tensorflow  # for Python 2.7
-$ sudo pip3 uninstall tensorflow # for Python 3.n
+self.model_xml = "./lrmodels/tiny-YoloV3/FP16/frozen_tiny_yolo_v3.xml"
+  =>  self.model_xml = "./lrmodels/tiny-YoloV3/FP16/frozen_yolov3-tiny-mine.xml"
+self.model_bin = "./lrmodels/tiny-YoloV3/FP16/frozen_tiny_yolo_v3.bin"
+  =>  self.model_xml = "./lrmodels/tiny-YoloV3/FP16/frozen_yolov3-tiny-mine.bin"
 ```
-
-MobileNetv2-SSDLite Clone of learning data generation tool.
-
+Then, connect USBcamera and NCS2 to PC and execute the following command<br>
 ```
 $ cd ~
-$ git clone https://github.com/PINTO0309/MobileNetv2-SSDLite.git
-$ cd ~/MobileNetv2-SSDLite/ssdlite
-$ wget http://download.tensorflow.org/models/object_detection/ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
-$ tar -zxvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
-$ rm ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz
+$ cd OpenVINO-YoloV3
+$ python3 openvino_tiny-yolov3_MultiStick_test.py -numncs 1
 ```
-
-Execute the following command.
+All processes are complete!<br>
+Thank you!<br>
