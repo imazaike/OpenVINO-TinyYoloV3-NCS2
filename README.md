@@ -112,7 +112,7 @@ $ python3 convert_weights_pb.py \
 ![weight-to-pb](https://user-images.githubusercontent.com/42289678/62821001-156ee600-bba8-11e9-8798-cd05571de65c.png)
 
 ```
-$ sudo python3 /opt/intel//deployment_tools/model_optimizer/mo_tf.py \
+$ sudo python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo_tf.py \
 --input_model pbmodels/frozen_yolov3-tiny-mine.pb \
 --output_dir lrmodels/tiny-YoloV3/FP16 \
 --data_type FP16 \
