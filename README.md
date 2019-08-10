@@ -6,10 +6,6 @@ Inspired from https://github.com/PINTO0309/OpenVINO-YoloV3<br>
 誠に勝手ながらPINTOさんの記事をかなり参考にさせていただきました。ありがとうございます。<br>
 がんばって勉強中ですが、理解しきれていない所もあります。何か間違いなどお気づきになられましたら、是非とも教えていただきたいです。<br>
 
-## tiny-YoloV3 + NCS2 SingleStick
-```
-$ python3 openvino_tiny-yolov3_MultiStick_test.py -numncs 1
-```
 ## Environment
 DesktopPC(Ubuntu16.04)<br>
 NUC(Ubuntu18.04)<br>
