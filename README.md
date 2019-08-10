@@ -1,5 +1,6 @@
 # OpenVINO-tinyYolov3
 OpenVINO-tinyYolov3+ NCS2 + Raspberry pi3 model B+(raspbian stretch)/NUC(Ubuntu18.04)/DesktopPC(Ubuntu16.04) + USBcamera + Python3<br>
+
 Inspired from https://github.com/PINTO0309/OpenVINO-YoloV3<br>
 初心者のため、かなり手こずってしまったので、私と同じ右も左もわからない初心者向けにメモを残します。<br>
 誠に勝手ながらPINTOさんの記事をかなり参考にさせていただきました。ありがとうございます。<br>
@@ -34,7 +35,7 @@ $ tar -xvzf l_openvino_toolkit_p_<version>.tgz
 $ rm l_openvino_toolkit_p_<version>.tgz
 $ cd l_openvino_toolkit_p_<version>
 ```
-install OpenVINO<br>
+Install OpenVINO<br>
 Please proceed without any changes<br>
 ```
 sudo ./install_GUI.sh
