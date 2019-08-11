@@ -149,5 +149,6 @@ $ cd ~
 $ cd OpenVINO-YoloV3
 $ python3 openvino_tiny-yolov3_MultiStick_test.py -numncs 1
 ```
+If the screen turns white, change the GL driver to Legacy<br>
 All processes are complete!<br>
 Thank you!<br>
