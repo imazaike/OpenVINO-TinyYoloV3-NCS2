@@ -94,14 +94,14 @@ $ sh /opt/intel/openvino/install_dependencies/install_NCS_udev_rules.sh
 
 ### Work with DesktopPC(Ubuntu 16.04)
 Convert weight file(Darknet(.weights) -> Tensorflow(.pb) -> OpenVINO(.bin))<br>
-1. Download this file<br>
-https://drive.google.com/open?id=1n_njAPr3hfjWgHAyyaBrde4oF-3-W-W_<br>
-2. Execute the following command<br>
+
+Execute the following command<br>
 ```
 $ cd ~
 $ git clone https://github.com/PINTO0309/OpenVINO-YoloV3.git
 $ cd OpenVINO-YoloV3.git
-$ cp ~/Downloads/yolov3-tiny.weights weights
+copy weights file from ~/darknet/yolov3-tiny.weights to ~/OpenVINO-YoloV3/weights<br>
+$ cp ~/darknet/yolov3-tiny.weights weights
 $ python3 convert_weights_pb.py \
 --class_names coco.names \
 --weights_file weights/yolov3-tiny.weights \
