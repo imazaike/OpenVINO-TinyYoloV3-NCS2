@@ -100,7 +100,7 @@ Execute the following command<br>
 $ cd ~
 $ git clone https://github.com/PINTO0309/OpenVINO-YoloV3.git
 $ cd OpenVINO-YoloV3.git
-copy weights file from ~/darknet/yolov3-tiny.weights to ~/OpenVINO-YoloV3/weights<br>
+copy weights file from ~/darknet/yolov3-tiny.weights to ~/OpenVINO-YoloV3/weights
 $ cp ~/darknet/yolov3-tiny.weights weights
 $ python3 convert_weights_pb.py \
 --class_names coco.names \
@@ -134,7 +134,7 @@ Execute the following command<br>
 $ cd ~
 $ git clone https://github.com/PINTO0309/OpenVINO-YoloV3.git
 ```
-Copy 3files(.bin)(.mapping)(.xml) to /home/<username>/OpenVINO-YoloV3/lrmodels/tiny-YoloV3/FP16/<br>
+Copy 3files(.bin)(.mapping)(.xml) to /home/(username)/OpenVINO-YoloV3/lrmodels/tiny-YoloV3/FP16/<br>
 And, Edit the file(/OpenVINO-YoloV3/openvino_tiny-yolov3_MultiStick_test.py)<br>
 
 ```
