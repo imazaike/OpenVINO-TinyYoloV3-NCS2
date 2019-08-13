@@ -3,7 +3,7 @@ OpenVINO-tinyYolov3+ NCS2 + Raspberry pi3 model B+(raspbian stretch)/NUC(Ubuntu1
 
 Inspired from https://github.com/PINTO0309/OpenVINO-YoloV3<br>
 初心者のため、かなり手こずってしまったので、私と同じ右も左もわからない初心者向けにメモを残します。<br>
-誠に勝手ながらPINTOさんの記事をかなり参考にさせていただきました。ありがとうございます。<br>
+誠に勝手ながらPINTO様の記事をかなり参考にさせていただきました。ありがとうございます。<br>
 がんばって勉強中ですが、理解しきれていない所もあります。何か間違いなどお気づきになられましたら、是非とも教えていただきたいです。<br>
 
 ## Environment
